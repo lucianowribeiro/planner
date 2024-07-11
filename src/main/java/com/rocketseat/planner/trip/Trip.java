@@ -14,7 +14,7 @@ import java.util.UUID;
 public class Trip {
     public Trip(){}
 
-    public Trip(TripPayload payload){
+    public Trip(TripRequestPayload payload){
         this.destination = payload.destination();
         this.startsAt = LocalDateTime.parse(payload.starts_at(), DateTimeFormatter.ISO_DATE_TIME);
         this.endsAt =  LocalDateTime.parse(payload.ends_at(), DateTimeFormatter.ISO_DATE_TIME);
